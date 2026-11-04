@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCloset | Meus Looks</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f8f4;
+            font-family: 'DM Sans', sans-serif;
+            color: #39483e;
+        }
+
+        .navbar {
+            background-color: #e5ebe2;
+        }
+
+        .navbar-brand, .titulo-secao {
+            font-family: 'Playfair Display', serif;
+            color: #526b57;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #526b57;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #829782;
+        }
+
+        .inicio {
+            padding: 65px 20px 40px;
+            text-align: center;
+        }
+
+        .inicio h1 {
+            font-family: 'Playfair Display', serif;
+            color: #526b57;
+            font-size: clamp(32px, 5vw, 45px);
+        }
+
+        .card {
+            border: 1px solid #e3e9e0;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        .btn-sage {
+            background-color: #829782;
+            color: white;
+            border: none;
+            padding: 11px 25px;
+            border-radius: 25px;
+        }
+
+        .btn-sage:hover {
+            background-color: #657d68;
+            color: white;
+        }
+
+        .form-control, .form-select {
+            border-color: #dce5da;
+            padding: 10px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #829782;
+            box-shadow: 0 0 0 0.2rem rgba(130, 151, 130, 0.2);
+        }
+
+        footer {
+            background-color: #e5ebe2;
+            color: #657765;
+            padding: 22px;
+            text-align: center;
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">MyCloset.</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#guarda-roupa">
+                            Meu guarda-roupa
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="looks.html">Meus looks</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="inicio">
+        <div class="container">
+
+            <h1>Monte seus looks!</h1>
+
+            <p class="text-secondary mt-3">
+                Combine suas peças favoritas e crie novas produções.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="container my-4">
+
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+
+                <div class="card p-4">
+
+                    <h3 class="titulo-secao text-center mb-4">
+                        Criar combinação
+                    </h3>
+
+                    <form id="form-look">
+
+                        <div class="mb-3">
+                            <label for="nome-look" class="form-label">
+                                Nome do look
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                id="nome-look"
+                                placeholder="Ex: Look para passeio"
+                                maxlength="50"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="peca1" class="form-label">
+                                Primeira peça
+                            </label>
+
+                            <select class="form-select" id="peca1" required>
+                                <option value="">Selecione uma peça</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="peca2" class="form-label">
+                                Segunda peça
+                            </label>
+
+                            <select class="form-select" id="peca2" required>
+                                <option value="">Selecione uma peça</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="peca3" class="form-label">
+                                Terceira peça ou acessório (opcional)
+                            </label>
+
+                            <select class="form-select" id="peca3">
+                                <option value="">Nenhuma peça adicional</option>
+                            </select>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-sage">
+                                Salvar look
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <div id="feedback-looks"
+                        class="alert d-none mt-3 mb-0"
+                        role="alert"
+                        aria-live="polite">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container my-5">
+
+        <h2 class="titulo-secao text-center mb-4">
+            Meus looks salvos
+        </h2>
+
+        <div id="lista-looks" class="row g-3"></div>
+
+    </section>
+
+    <footer>
+        <p class="mb-0">
+            MyCloset 
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="looks.js"></script>
+
+</body>
+</html>

@@ -1,331 +1,300 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minha Rotina</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCloset | Meu Guarda-Roupa</title>
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <body class="bg-light">
-    <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Minha Rotina</a>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <style>
+        body {
+            background-color: #f7f8f4;
+            font-family: 'DM Sans', sans-serif;
+            color: #39483e;
+        }
 
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#inicio">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#montar">Montar rotina</a>
-            </li>
+        .navbar {
+            background-color: #e5ebe2;
+        }
 
-            <li class="nav-item">
-              <a class="nav-link" href="./dicas.html">Dicas</a>
-            </li>
-          </ul>
+        .navbar-brand, .titulo-secao {
+            font-family: 'Playfair Display', serif;
+            color: #526b57;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #526b57;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #829782;
+        }
+
+        .inicio {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .inicio h1 {
+            font-family: 'Playfair Display', serif;
+            color: #526b57;
+            font-size: clamp(32px, 5vw, 48px);
+        }
+
+        .inicio p {
+            color: #788579;
+            font-size: 17px;
+        }
+
+        .btn-sage {
+            background-color: #829782;
+            color: white;
+            border: none;
+            padding: 11px 25px;
+            border-radius: 25px;
+        }
+
+        .btn-sage:hover {
+            background-color: #657d68;
+            color: white;
+        }
+
+        .card {
+            border: 1px solid #e3e9e0;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        .form-control, .form-select {
+            border-color: #dce5da;
+            padding: 10px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #829782;
+            box-shadow: 0 0 0 0.2rem rgba(130, 151, 130, 0.2);
+        }
+
+        .categoria {
+            background-color: #e5ebe2;
+            color: #526b57;
+        }
+
+        footer {
+            background-color: #e5ebe2;
+            color: #657765;
+            padding: 22px;
+            text-align: center;
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">MyCloset.</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#guarda-roupa">Meu guarda-roupa</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="looks.html">Meus looks</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-      </div>
     </nav>
 
-    <!-- Apresentação -->
-    <header id="inicio" class="bg-primary-subtle py-5">
-      <div class="container text-center">
-        <h1 class="display-4 fw-bold">Organize sua rotina!</h1>
+    <section class="inicio">
+        <div class="container">
+            <h1>Seu guarda-roupa, organizado.</h1>
 
-        <p class="lead">
-          Monte sua rotina de acordo com seus horários e atividades.
+            <p class="mt-3">
+                Organize suas peças, descubra combinações
+                e encontre seu estilo com facilidade.
+            </p>
+
+            <a href="#guarda-roupa" class="btn btn-sage mt-3">
+                Organizar minhas roupas
+            </a>
+        </div>
+    </section>
+
+    <section class="container my-5" id="guarda-roupa">
+
+        <h2 class="titulo-secao text-center mb-2">
+            Meu guarda-roupa
+        </h2>
+
+        <p class="text-center text-secondary mb-4">
+            Cadastre suas peças e deixe tudo organizado!
         </p>
 
-        <a href="#montar" class="btn btn-primary btn-lg"> Começar </a>
-      </div>
-    </header>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-7">
 
-    <main class="container my-5">
-      <!-- Atividades -->
-      <section class="mb-5">
-        <h2 class="text-center mb-4">O que você pode organizar?</h2>
+                <div class="card p-4">
 
-        <div class="row g-3">
-          <div class="col-md-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <h3 class="h5">Estudos</h3>
-                <p>Organize suas tarefas e horários de estudo.</p>
-              </div>
+                    <h4 class="titulo-secao mb-4">
+                        Adicionar nova peça
+                    </h4>
+
+                    <form id="form-roupa">
+
+                        <div class="mb-3">
+                            <label for="nome-roupa" class="form-label">
+                                Nome da peça
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                id="nome-roupa"
+                                placeholder="Ex: Camiseta branca"
+                                maxlength="50"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="categoria" class="form-label">
+                                Categoria
+                            </label>
+
+                            <select class="form-select" id="categoria" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="Blusas">Blusas</option>
+                                <option value="Calças">Calças</option>
+                                <option value="Shorts e saias">Shorts e saias</option>
+                                <option value="Vestidos">Vestidos</option>
+                                <option value="Casacos">Casacos</option>
+                                <option value="Sapatos">Sapatos</option>
+                                <option value="Acessórios">Acessórios</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cor" class="form-label">
+                                Cor da peça
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                id="cor"
+                                placeholder="Ex: Branco"
+                                maxlength="30"
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="tipo" class="form-label">
+                                Tipo
+                            </label>
+
+                            <select class="form-select" id="tipo" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="Roupa">Roupa</option>
+                                <option value="Acessório">Acessório</option>
+                            </select>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-sage">
+                                Cadastrar peça
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <div id="feedback-roupas"
+                        class="alert d-none mt-3 mb-0"
+                        role="alert"
+                        aria-live="polite">
+                    </div>
+
+                </div>
             </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <h3 class="h5">Autocuidado</h3>
-                <p>Separe um tempo para cuidar de você.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <h3 class="h5">Exercícios</h3>
-                <p>Inclua atividades físicas no seu dia.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <h3 class="h5">Lazer</h3>
-                <p>Tenha tempo para descansar e se divertir.</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
 
-      <!-- Formulário -->
-      <section id="montar" class="mb-5">
-        <div class="row g-4">
-          <!-- Configurações da rotina -->
-          <div class="col-lg-5">
-            <div class="card h-100">
-              <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Monte sua rotina</h2>
-              </div>
+        <div class="mt-5">
 
-              <div class="card-body">
-                <form id="form-rotina">
-                  <div class="mb-3">
-                    <label for="nome" class="form-label">Seu nome:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nome"
-                      required
-                    />
-                  </div>
+            <h3 class="titulo-secao text-center mb-4">
+                Minhas peças
+            </h3>
 
-                  <div class="mb-3">
-                    <label for="acordar" class="form-label"
-                      >Horário de acordar:</label
-                    >
-                    <input
-                      type="time"
-                      class="form-control"
-                      id="acordar"
-                      value="06:30"
-                      required
-                    />
-                  </div>
+            <div class="row g-3 mb-4">
 
-                  <div class="mb-3">
-                    <label for="dormir" class="form-label"
-                      >Horário de dormir:</label
-                    >
-                    <input
-                      type="time"
-                      class="form-control"
-                      id="dormir"
-                      value="22:00"
-                      required
-                    />
-                  </div>
-
-                  <hr />
-                  <h3 class="h5 mb-3">Atividades e duração</h3>
-
-                  <div class="mb-3">
-                    <label for="estudar" class="form-label"
-                      >Estudar (minutos):</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="estudar"
-                      value="120"
-                      min="15"
-                      step="15"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="almoco" class="form-label"
-                      >Almoçar e descansar (minutos):</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="almoco"
-                      value="60"
-                      min="15"
-                      step="15"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exercicios" class="form-label"
-                      >Exercícios (minutos):</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="exercicios"
-                      value="45"
-                      min="15"
-                      step="15"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="autocuidado" class="form-label"
-                      >Autocuidado (minutos):</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="autocuidado"
-                      value="30"
-                      min="15"
-                      step="15"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="lazer" class="form-label"
-                      >Lazer (minutos):</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="lazer"
-                      value="60"
-                      min="15"
-                      step="15"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="intervalo" class="form-label"
-                      >Intervalo entre as atividades:</label
-                    >
-                    <select id="intervalo" class="form-select">
-                      <option value="5">5 minutos</option>
-                      <option value="15" selected>15 minutos</option>
-                      <option value="30">30 minutos</option>
-                      <option value="60">1 hora</option>
-                    </select>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary w-100">
-                    Criar rotina
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <!-- Rotina gerada -->
-          <div class="col-lg-7">
-            <div class="card h-100">
-              <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Minha rotina</h2>
-              </div>
-
-              <div class="card-body">
-                <p id="saudacao">Sua rotina aparecerá aqui.</p>
-
-                <div class="progress mb-3">
-                  <div
-                    id="progresso"
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  ></div>
+                <div class="col-md-6">
+                    <input type="text"
+                        class="form-control"
+                        id="pesquisa-roupa"
+                        placeholder="Pesquisar pelo nome da peça...">
                 </div>
 
-                <p id="contador">0 tarefas concluídas</p>
+                <div class="col-md-4">
+                    <select class="form-select" id="filtro-categoria">
+                        <option value="">Todas as categorias</option>
+                        <option value="Blusas">Blusas</option>
+                        <option value="Calças">Calças</option>
+                        <option value="Shorts e saias">Shorts e saias</option>
+                        <option value="Vestidos">Vestidos</option>
+                        <option value="Casacos">Casacos</option>
+                        <option value="Sapatos">Sapatos</option>
+                        <option value="Acessórios">Acessórios</option>
+                    </select>
+                </div>
 
-                <ul id="lista-rotina" class="list-group mb-3"></ul>
+                <div class="col-md-2">
+                    <button type="button"
+                        class="btn btn-outline-secondary w-100"
+                        id="limpar-filtros">
+                        Limpar
+                    </button>
+                </div>
 
-                <button
-                  type="button"
-                  id="limpar"
-                  class="btn btn-outline-secondary"
-                >
-                  Limpar rotina
-                </button>
-              </div>
             </div>
-          </div>
+
+            <p id="contador-roupas" class="text-secondary text-center mb-4">
+                0 peças cadastradas
+            </p>
+
+            <div id="lista-roupas" class="row g-3"></div>
+
         </div>
-      </section>
 
-      <!-- Dicas rápidas -->
-      <section class="mb-5">
-        <h2 class="text-center mb-4">Dicas para se organizar</h2>
+    </section>
 
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h3 class="h5">1. Planeje seu dia</h3>
-                <p>Anote o que você precisa fazer e defina prioridades.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h3 class="h5">2. Faça pausas</h3>
-                <p>
-                  Descanse entre as atividades para não ficar sobrecarregado.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h3 class="h5">3. Tenha equilíbrio</h3>
-                <p>Organize seus compromissos sem esquecer o lazer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-dark text-white text-center py-3">
-      <p class="mb-0">ORGANIZE A SUA ROTINA</p>
+    <footer>
+        <p class="mb-0">
+            MyCloset 
+        </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
